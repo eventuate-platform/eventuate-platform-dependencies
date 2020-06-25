@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.eventuate.platform</groupId>
+    <artifactId>platform-dependencies</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>eventuate-platform-dependencies</name>
+    <url>http://maven.apache.org</url>
+    <packaging>pom</packaging>
+
+    <properties>
+        <eventuate.tram.version>0.25.0.BUILD-SNAPSHOT</eventuate.tram.version>
+        <eventuate.tram.sagas.version>0.13.0.RELEASE</eventuate.tram.sagas.version>
+        <eventuate.local.version>0.32.0.RELEASE</eventuate.local.version>
+        <eventuate.cdc.version>0.6.1.RELEASE</eventuate.cdc.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.eventuate.tram.core</groupId>
+                <artifactId>eventuate-tram-bom</artifactId>
+                <version>${eventuate.tram.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>eventuate-tram-snapshot</id>
+            <url>https://snapshots.repositories.eventuate.io/repository</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+         <repository>
+             <id>testdeploy</id>
+             <name>testdeploy</name>
+             <url>file:///Users/cer/.m2/testdeploy</url>
+             <releases>
+                 <enabled>true</enabled>
+             </releases>
+             <snapshots>
+                 <enabled>true</enabled>
+             </snapshots>
+         </repository>
+  </repositories>
+
+  <distributionManagement>
+   <repository>
+     <id>testdeploy</id>
+     <name>Test deploy</name>
+     <url>file:///Users/cer/.m2/testdeploy</url>
+   </repository>
+ </distributionManagement>
+
+</project>
