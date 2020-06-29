@@ -11,17 +11,31 @@
 
     <properties>
         <eventuate.tram.version>0.25.0.BUILD-SNAPSHOT</eventuate.tram.version>
-        <eventuate.tram.sagas.version>0.13.0.RELEASE</eventuate.tram.sagas.version>
-        <eventuate.local.version>0.32.0.RELEASE</eventuate.local.version>
+        <eventuate.tram.sagas.version>0.15.0.BUILD-SNAPSHOT</eventuate.tram.sagas.version>
+        <eventuate.local.version>0.34.0.BUILD-SNAPSHOT</eventuate.local.version>
         <eventuate.cdc.version>0.6.1.RELEASE</eventuate.cdc.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>io.eventuate.local.java</groupId>
+                <artifactId>eventuate-local-bom</artifactId>
+                <version>${eventuate.local.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>io.eventuate.tram.core</groupId>
                 <artifactId>eventuate-tram-bom</artifactId>
                 <version>${eventuate.tram.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.eventuate.tram.sagas</groupId>
+                <artifactId>eventuate-tram-sagas-bom</artifactId>
+                <version>${eventuate.tram.sagas.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
