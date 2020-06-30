@@ -4,6 +4,10 @@ BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 if [  $BRANCH == "master" ] ; then
   BUILD_SNAPSHOT=$(grep '<version>' pom.xml  | head -1 | sed -e 's/.*<version>//' -e 's/<.*//' -e 's/-SNAPSHOT/.BUILD-SNAPSHOT/')
+
+  export AWS_ACCESS_KEY_ID=${S3_REPO_AWS_ACCESS_KEY?}
+  export AWS_SECRET_ACCESS_KEY=${S3_REPO_AWS_SECRET_ACCESS_KEY?}
+
   echo master: publishing $BUILD_SNAPSHOT
   ./mvnw versions:set -D newVersion=$BUILD_SNAPSHOT
   ./mvnw deploy -D deploy.repo=${S3_REPO_DEPLOY_URL?}  -D version=0.1.0.BUILD-SNAPSHOT
