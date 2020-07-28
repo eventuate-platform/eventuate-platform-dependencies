@@ -10,10 +10,10 @@
     <packaging>pom</packaging>
 
     <properties>
-        <eventuate.tram.version>0.25.0.BUILD-SNAPSHOT</eventuate.tram.version>
-        <eventuate.tram.sagas.version>0.15.0.BUILD-SNAPSHOT</eventuate.tram.sagas.version>
-        <eventuate.local.version>0.34.0.BUILD-SNAPSHOT</eventuate.local.version>
-        <eventuate.cdc.version>0.6.1.RELEASE</eventuate.cdc.version>
+        <eventuateTramVersion>0.25.0.BUILD-SNAPSHOT</eventuateTramVersion>
+        <eventuateTramSagasVersion>0.15.0.BUILD-SNAPSHOT</eventuateTramSagasVersion>
+        <eventuateLocalVersion>0.34.0.BUILD-SNAPSHOT</eventuateLocalVersion>
+        <eventuateCdcVersion>0.6.1.RELEASE</eventuateCdcVersion>
     </properties>
 
     <dependencyManagement>
@@ -21,21 +21,21 @@
             <dependency>
                 <groupId>io.eventuate.local.java</groupId>
                 <artifactId>eventuate-local-bom</artifactId>
-                <version>${eventuate.local.version}</version>
+                <version>${eventuateLocalVersion}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>io.eventuate.tram.core</groupId>
                 <artifactId>eventuate-tram-bom</artifactId>
-                <version>${eventuate.tram.version}</version>
+                <version>${eventuateTramVersion}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>io.eventuate.tram.sagas</groupId>
                 <artifactId>eventuate-tram-sagas-bom</artifactId>
-                <version>${eventuate.tram.sagas.version}</version>
+                <version>${eventuateTramSagasVersion}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
