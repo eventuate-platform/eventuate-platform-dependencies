@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    working_directory: ~/eventuate-platform-dependencies
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - eventuate-platform-dependencies-{{ checksum "pom.xml" }}
+            - eventuate-platform-dependencies-
+      - run: TERM=dumb ./mvnw package
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: eventuate-platform-dependencies-{{ checksum "pom.xml" }}
+      - run:
+          name: Publish artifacts
+          command: |
+            TERM=dumb ./.circleci/deploy-artifacts.sh
+          when: on_success

@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.eventuate.platform</groupId>
     <artifactId>platform-dependencies</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <name>eventuate-platform-dependencies</name>
     <url>http://maven.apache.org</url>
     <packaging>pom</packaging>
@@ -14,6 +14,7 @@
         <eventuateTramSagasVersion>0.15.0.BUILD-SNAPSHOT</eventuateTramSagasVersion>
         <eventuateLocalVersion>0.34.0.BUILD-SNAPSHOT</eventuateLocalVersion>
         <eventuateCdcVersion>0.6.1.RELEASE</eventuateCdcVersion>
+        <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
     </properties>
 
     <dependencyManagement>
@@ -67,11 +68,21 @@
   </repositories>
 
   <distributionManagement>
-   <repository>
-     <id>testdeploy</id>
-     <name>Test deploy</name>
-     <url>file:///Users/cer/.m2/testdeploy</url>
-   </repository>
+   <snapshotRepository>
+     <id>snapshotdeployrepo</id>
+     <name>Deploy repo</name>
+     <url>${deploy.repo}</url>
+   </snapshotRepository>
  </distributionManagement>
+
+ <build>
+     <extensions>
+         <extension>
+             <groupId>com.gkatzioura.maven.cloud</groupId>
+             <artifactId>s3-storage-wagon</artifactId>
+             <version>2.3</version>
+         </extension>
+     </extensions>
+ </build>
 
 </project>
