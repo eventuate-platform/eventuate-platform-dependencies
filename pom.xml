@@ -10,10 +10,10 @@
     <packaging>pom</packaging>
 
     <properties>
-        <eventuateTramVersion>0.25.0.BUILD-SNAPSHOT</eventuateTramVersion>
+        <eventuateTramVersion>0.26.0.BUILD-SNAPSHOT</eventuateTramVersion>
         <eventuateTramSagasVersion>0.15.0.BUILD-SNAPSHOT</eventuateTramSagasVersion>
         <eventuateLocalVersion>0.34.0.BUILD-SNAPSHOT</eventuateLocalVersion>
-        <eventuateCdcVersion>0.6.1.RELEASE</eventuateCdcVersion>
+        <eventuateCdcVersion>0.9.0.BUILD-SNAPSHOT</eventuateCdcVersion>
         <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
     </properties>
 
