@@ -32,6 +32,21 @@ echo BINTRAY_REPO_TYPE=${BINTRAY_REPO_TYPE}
 
 VERSION=$BRANCH
 
-echo Implement me
 
-exit 99
+cat > ~/.m2/settings.xml <<END
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+      <server>
+        <id>bintray-eventuate-maven-release</id>
+        <username>\${bintray.userId}</username>
+        <password>\${bintray.apiKey}</password>
+      </server>
+    </servers>
+</settings>
+END
+
+./mvnw versions:set -D newVersion=$VERSION
+./mvnw -X -e deploy -Dbintray.userId=${BINTRAY_USER?} -Dbintray.apiKey=${BINTRAY_KEY?}

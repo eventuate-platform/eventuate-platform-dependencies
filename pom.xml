@@ -84,6 +84,10 @@
      <name>Deploy repo</name>
      <url>${deploy.repo}</url>
    </snapshotRepository>
+   <repository>
+      <id>bintray-eventuate-maven-release</id>
+      <url>https://api.bintray.com/maven/eventuateio-oss/eventuate-maven-release/eventuate-platform-dependencies/;publish=1</url>
+  </repository>
  </distributionManagement>
 
  <build>
