@@ -10,7 +10,7 @@ if [  $BRANCH == "master" ] ; then
 
   echo master: publishing $BUILD_SNAPSHOT
   ./mvnw versions:set -D newVersion=$BUILD_SNAPSHOT
-  ./mvnw deploy -D deploy.repo=${S3_REPO_DEPLOY_URL?}  -D version=0.1.0.BUILD-SNAPSHOT
+  ./mvnw deploy -D deploy.repo=${S3_REPO_DEPLOY_URL?}
   exit 0
 fi
 

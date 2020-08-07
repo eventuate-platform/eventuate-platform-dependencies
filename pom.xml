@@ -10,10 +10,10 @@
     <packaging>pom</packaging>
 
     <properties>
-        <eventuateTramVersion>0.26.0.BUILD-SNAPSHOT</eventuateTramVersion>
-        <eventuateTramSagasVersion>0.15.0.BUILD-SNAPSHOT</eventuateTramSagasVersion>
-        <eventuateLocalVersion>0.34.0.BUILD-SNAPSHOT</eventuateLocalVersion>
-        <eventuateCdcVersion>0.9.0.BUILD-SNAPSHOT</eventuateCdcVersion>
+        <eventuateTramVersion>0.26.0.RELEASE</eventuateTramVersion>
+        <eventuateTramSagasVersion>0.15.0.RELEASE</eventuateTramSagasVersion>
+        <eventuateLocalVersion>0.34.0.RELEASE</eventuateLocalVersion>
+        <eventuateCdcVersion>0.9.0.RELEASE</eventuateCdcVersion>
         <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
     </properties>
 
@@ -52,6 +52,17 @@
             </releases>
             <snapshots>
                 <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter</name>
+            <url>https://jcenter.bintray.com/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
             </snapshots>
         </repository>
          <repository>
