@@ -49,4 +49,4 @@ cat > ~/.m2/settings.xml <<END
 END
 
 ./mvnw versions:set -D newVersion=$VERSION
-./mvnw -X -e deploy -Dbintray.userId=${BINTRAY_USER?} -Dbintray.apiKey=${BINTRAY_KEY?}
+./mvnw deploy -Dbintray.userId=${BINTRAY_USER?} -Dbintray.apiKey=${BINTRAY_KEY?}
