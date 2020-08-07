@@ -11,7 +11,7 @@
 
     <properties>
         <eventuateTramVersion>0.26.0.RELEASE</eventuateTramVersion>
-        <eventuateTramSagasVersion>0.15.0.BUILD-SNAPSHOT</eventuateTramSagasVersion>
+        <eventuateTramSagasVersion>0.15.1.RELEASE</eventuateTramSagasVersion>
         <eventuateLocalVersion>0.34.0.RELEASE</eventuateLocalVersion>
         <eventuateCdcVersion>0.9.0.RELEASE</eventuateCdcVersion>
         <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
