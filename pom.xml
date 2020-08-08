@@ -10,9 +10,9 @@
     <packaging>pom</packaging>
 
     <properties>
-        <eventuateTramVersion>0.27.0.BUILD-SNAPSHOT</eventuateTramVersion>
-        <eventuateTramSagasVersion>0.15.2.BUILD-SNAPSHOT</eventuateTramSagasVersion>
-        <eventuateLocalVersion>0.34.1.BUILD-SNAPSHOT</eventuateLocalVersion>
+        <eventuateTramVersion>0.26.1.RC1</eventuateTramVersion>
+        <eventuateTramSagasVersion>0.15.2.RC1</eventuateTramSagasVersion>
+        <eventuateLocalVersion>0.34.1.RC1</eventuateLocalVersion>
         <eventuateCdcVersion>0.9.0.RELEASE</eventuateCdcVersion>
         <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
     </properties>
@@ -52,6 +52,16 @@
             </releases>
             <snapshots>
                 <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>eventuate-tram-rc</id>
+            <url>https://dl.bintray.com/eventuateio-oss/eventuate-maven-rc</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
             </snapshots>
         </repository>
         <repository>
