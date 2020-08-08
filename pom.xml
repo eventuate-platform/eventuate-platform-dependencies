@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.eventuate.platform</groupId>
     <artifactId>eventuate-platform-dependencies</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>2020.3-SNAPSHOT</version>
     <name>eventuate-platform-dependencies</name>
     <url>http://maven.apache.org</url>
     <packaging>pom</packaging>
 
     <properties>
-        <eventuateTramVersion>0.26.0.RELEASE</eventuateTramVersion>
-        <eventuateTramSagasVersion>0.15.1.RELEASE</eventuateTramSagasVersion>
-        <eventuateLocalVersion>0.34.0.RELEASE</eventuateLocalVersion>
+        <eventuateTramVersion>0.27.0.BUILD-SNAPSHOT</eventuateTramVersion>
+        <eventuateTramSagasVersion>0.15.2.BUILD-SNAPSHOT</eventuateTramSagasVersion>
+        <eventuateLocalVersion>0.34.1.BUILD-SNAPSHOT</eventuateLocalVersion>
         <eventuateCdcVersion>0.9.0.RELEASE</eventuateCdcVersion>
         <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
     </properties>
