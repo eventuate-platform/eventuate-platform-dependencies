@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.eventuate.platform</groupId>
     <artifactId>eventuate-platform-dependencies</artifactId>
-    <version>2020.3-SNAPSHOT</version>
+    <version>2020.4-SNAPSHOT</version>
     <name>eventuate-platform-dependencies</name>
     <url>http://maven.apache.org</url>
     <packaging>pom</packaging>
