@@ -2,17 +2,27 @@
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [  $BRANCH == "master" ] ; then
-  BUILD_SNAPSHOT=$(grep '<version>' pom.xml  | head -1 | sed -e 's/.*<version>//' -e 's/<.*//' -e 's/-SNAPSHOT/.BUILD-SNAPSHOT/')
+if [  $BRANCH == "master" ] || [[ $BRANCH = wip-* ]] ; then
+
+  if [  $BRANCH == "master" ] ; then
+    BUILD_SNAPSHOT=$(grep '<version>' pom.xml  | head -1 | sed -e 's/.*<version>//' -e 's/<.*//' -e 's/-SNAPSHOT/.BUILD-SNAPSHOT/')
+  else
+    # def suffix = gitBranch().substring("wip-".length()).replace("-", "_").toUpperCase()
+    SUFFIX=.$(BRANCH=$(git rev-parse --abbrev-ref HEAD) ; echo ${BRANCH:4} | tr - _ | awk '{ print toupper($0) }')
+    # return project.version.replace("-SNAPSHOT", "." + suffix + ".BUILD-SNAPSHOT")
+    BUILD_SNAPSHOT=$(grep '<version>' pom.xml  | head -1 | sed -e 's/.*<version>//' -e 's/<.*//' -e "s/-SNAPSHOT/$SUFFIX.BUILD-SNAPSHOT/")
+  fi
+
+  echo master: publishing ${BUILD_SNAPSHOT?}
 
   export AWS_ACCESS_KEY_ID=${S3_REPO_AWS_ACCESS_KEY?}
   export AWS_SECRET_ACCESS_KEY=${S3_REPO_AWS_SECRET_ACCESS_KEY?}
 
-  echo master: publishing $BUILD_SNAPSHOT
   ./mvnw versions:set -D newVersion=$BUILD_SNAPSHOT
   ./mvnw deploy -D deploy.repo=${S3_REPO_DEPLOY_URL?}
   exit 0
 fi
+
 
 if ! [[  $BRANCH =~ ^[0-9]+ ]] ; then
   echo Not release $BRANCH - no PUSH
