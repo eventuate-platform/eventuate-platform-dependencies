@@ -10,10 +10,10 @@
     <packaging>pom</packaging>
 
     <properties>
-        <eventuateTramVersion>0.27.0.DB_ID_GEN.BUILD-SNAPSHOT</eventuateTramVersion>
-        <eventuateTramSagasVersion>0.16.0.DB_ID_GEN.BUILD-SNAPSHOT</eventuateTramSagasVersion>
-        <eventuateLocalVersion>0.35.1.DB_ID_GEN.BUILD-SNAPSHOT</eventuateLocalVersion>
-        <eventuateCdcVersion>0.10.0.DB_ID_GEN.BUILD-SNAPSHOT</eventuateCdcVersion>
+        <eventuateTramVersion>0.27.0.BUILD-SNAPSHOT</eventuateTramVersion>
+        <eventuateTramSagasVersion>0.16.0.BUILD-SNAPSHOT</eventuateTramSagasVersion>
+        <eventuateLocalVersion>0.35.0.BUILD-SNAPSHOT</eventuateLocalVersion>
+        <eventuateCdcVersion>0.10.0.BUILD-SNAPSHOT</eventuateCdcVersion>
         <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
     </properties>
 
