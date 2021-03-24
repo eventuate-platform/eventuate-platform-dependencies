@@ -14,6 +14,11 @@
         <eventuateTramSagasVersion>0.16.0.BUILD-SNAPSHOT</eventuateTramSagasVersion>
         <eventuateLocalVersion>0.35.0.BUILD-SNAPSHOT</eventuateLocalVersion>
         <eventuateCdcVersion>0.10.0.BUILD-SNAPSHOT</eventuateCdcVersion>
+
+        <eventuateTramQuarkusVersion>0.1.0.BUILD-SNAPSHOT</eventuateTramQuarkusVersion>
+        <eventuateTramSagasQuarkusVersion>0.1.0.BUILD-SNAPSHOT</eventuateTramSagasQuarkusVersion>
+        <eventuateLocalQuarkusVersion>0.1.0.BUILD-SNAPSHOT</eventuateLocalQuarkusVersion>
+
         <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
     </properties>
 
@@ -37,6 +42,27 @@
                 <groupId>io.eventuate.tram.sagas</groupId>
                 <artifactId>eventuate-tram-sagas-bom</artifactId>
                 <version>${eventuateTramSagasVersion}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.eventuate.local.java</groupId>
+                <artifactId>eventuate-local-quarkus-bom</artifactId>
+                <version>${eventuateLocalQuarkusVersion}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.eventuate.tram.core</groupId>
+                <artifactId>eventuate-tram-quarkus-bom</artifactId>
+                <version>${eventuateTramQuarkusVersion}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.eventuate.tram.sagas</groupId>
+                <artifactId>eventuate-tram-sagas-quarkus-bom</artifactId>
+                <version>${eventuateTramSagasQuarkusVersion}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
