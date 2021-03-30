@@ -10,14 +10,14 @@
     <packaging>pom</packaging>
 
     <properties>
-        <eventuateTramVersion>0.27.0.BUILD-SNAPSHOT</eventuateTramVersion>
-        <eventuateTramSagasVersion>0.16.0.BUILD-SNAPSHOT</eventuateTramSagasVersion>
-        <eventuateLocalVersion>0.35.0.BUILD-SNAPSHOT</eventuateLocalVersion>
-        <eventuateCdcVersion>0.10.0.BUILD-SNAPSHOT</eventuateCdcVersion>
+        <eventuateTramVersion>0.27.0.RELEASE</eventuateTramVersion>
+        <eventuateTramSagasVersion>0.16.0.RELEASE</eventuateTramSagasVersion>
+        <eventuateLocalVersion>0.35.0.RELEASE</eventuateLocalVersion>
+        <eventuateCdcVersion>0.11.0.RELEASE</eventuateCdcVersion>
 
-        <eventuateTramQuarkusVersion>0.1.0.BUILD-SNAPSHOT</eventuateTramQuarkusVersion>
-        <eventuateTramSagasQuarkusVersion>0.1.0.BUILD-SNAPSHOT</eventuateTramSagasQuarkusVersion>
-        <eventuateLocalQuarkusVersion>0.1.0.BUILD-SNAPSHOT</eventuateLocalQuarkusVersion>
+        <eventuateTramQuarkusVersion>0.1.0.RELEASE</eventuateTramQuarkusVersion>
+        <eventuateTramSagasQuarkusVersion>0.1.0.RELEASE</eventuateTramSagasQuarkusVersion>
+        <eventuateLocalQuarkusVersion>0.2.0.RELEASE</eventuateLocalQuarkusVersion>
 
         <deploy.repo>file:///Users/cer/.m2/testdeploy</deploy.repo>
     </properties>
