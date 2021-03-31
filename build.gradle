@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        eventuateMavenRepoUrl.split(',').each { repoUrl -> maven { url repoUrl } }
+    }
+    dependencies {
+        classpath "io.eventuate.plugins.gradle:eventuate-plugins-gradle-publish:$eventuatePluginsGradleVersion"
+    }
+}
+
+plugins {
+    id 'java-platform'
+    id "maven-publish"
+}
+
+apply plugin: "io.eventuate.plugins.gradle.publish.EventuatePublish"
+
+group = "io.eventuate.platform"
+
+javaPlatform {
+    allowDependencies()
+}
+
+dependencies {
+    api platform("io.eventuate.local.java:eventuate-local-bom:${eventuateLocalVersion}")
+    api platform("io.eventuate.tram.core:eventuate-tram-bom:${eventuateTramVersion}")
+    api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-bom:${eventuateTramSagasVersion}")
+    api platform("io.eventuate.local.java:eventuate-local-quarkus-bom:${eventuateLocalQuarkusVersion}")
+    api platform("io.eventuate.tram.core:eventuate-tram-quarkus-bom:${eventuateTramQuarkusVersion}")
+    api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-quarkus-bom:${eventuateTramSagasQuarkusVersion}")
+}
