@@ -9,7 +9,7 @@ jobs:
           keys:
             - eventuate-platform-dependencies-{{ checksum "gradle.properties" }}-{{ checksum "gradle/wrapper/gradle-wrapper.properties" }}
             - eventuate-platform-dependencies-
-      - run: TERM=dumb ./gradlew testClasses
+      - run: TERM=dumb ./gradlew assemble
       - save_cache:
           paths:
             - ~/.gradle
