@@ -1,7 +1,8 @@
 version: 2
 jobs:
   build:
-    machine: true
+    docker:
+      - image: cimg/openjdk:8.0.322
     working_directory: ~/eventuate-platform-dependencies
     steps:
       - checkout
