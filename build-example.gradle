@@ -1,0 +1,15 @@
+
+
+apply plugin: "java"
+
+repositories {
+    mavenCentral()
+    eventuateMavenRepoUrl.split(',').each { repoUrl -> maven { url repoUrl } }
+}
+
+dependencies {
+    implementation(platform("io.eventuate.platform:eventuate-platform-dependencies:$version"))
+
+    implementation "io.eventuate.tram.core:eventuate-tram-messaging"
+    implementation "io.eventuate.util:eventuate-util-test"
+}

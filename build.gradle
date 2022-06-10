@@ -25,6 +25,7 @@ javaPlatform {
 }
 
 dependencies {
+    api platform("io.eventuate.util:eventuate-util-bom:${eventuateUtilVersion}")
     api platform("io.eventuate.local.java:eventuate-local-bom:${eventuateLocalVersion}")
     api platform("io.eventuate.tram.core:eventuate-tram-bom:${eventuateTramVersion}")
     api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-bom:${eventuateTramSagasVersion}")
