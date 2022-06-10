@@ -13,6 +13,7 @@ workflows:
       - eventuate-gradle-build-and-test/build-and-test:
           name: deploy
           project_name: eventuate-platform-dependencies
+          gradle_cache_command: echo skip caching
           script: ./.circleci/deploy-artifacts.sh
           requires:
             - build
