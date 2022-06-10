@@ -10,6 +10,9 @@ workflows:
           project_name: eventuate-platform-dependencies
           gradle_cache_command: ./test-platform-dependencies.sh
           script: ./test-platform-dependencies.sh
+          filters:
+            branches:
+              ignore: /.*RELEASE/
       - eventuate-gradle-build-and-test/build-and-test:
           name: deploy
           project_name: eventuate-platform-dependencies
