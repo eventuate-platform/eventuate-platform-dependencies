@@ -22,3 +22,15 @@ workflows:
             - build
           context:
             - publish
+  release:
+    jobs:
+      - eventuate-gradle-build-and-test/build-and-test:
+          name: deploy
+          project_name: eventuate-platform-dependencies
+          gradle_cache_command: echo skip caching
+          script: ./.circleci/deploy-artifacts.sh
+          context:
+            - publish
+          filters:
+            branches:
+              only: /.*RELEASE/
