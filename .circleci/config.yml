@@ -7,10 +7,12 @@ workflows:
     jobs:
       - eventuate-gradle-build-and-test/build-and-test:
           name: build
+          project_name: eventuate-platform-dependencies
           gradle_cache_command: ./test-platform-dependencies.sh
           script: ./test-platform-dependencies.sh
       - eventuate-gradle-build-and-test/build-and-test:
           name: deploy
+          project_name: eventuate-platform-dependencies
           script: ./.circleci/deploy-artifacts.sh
           requires:
             - build
