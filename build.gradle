@@ -26,6 +26,10 @@ javaPlatform {
 
 dependencies {
     api platform("io.eventuate.util:eventuate-util-bom:${eventuateUtilVersion}")
+    api platform("io.eventuate.common:eventuate-common-bom:${eventuateCommonVersion}")
+    api platform("io.eventuate.messaging.kafka:eventuate-messaging-kafka-bom:${eventuateMessagingKafkaVersion}")
+    api platform("io.eventuate.cdc:eventuate-cdc-bom:${eventuateCdcVersion}")
+
     api platform("io.eventuate.local.java:eventuate-local-bom:${eventuateLocalVersion}")
     api platform("io.eventuate.tram.core:eventuate-tram-bom:${eventuateTramVersion}")
     api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-bom:${eventuateTramSagasVersion}")
