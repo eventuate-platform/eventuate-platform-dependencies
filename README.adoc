@@ -1,0 +1,13 @@
+# eventuate-platform-dependencies
+
+## An Eventuate project
+
+image::https://eventuate.io/i/logo.gif[]
+
+This project is part of http://eventuate.io[Eventuate], which is a microservices collaboration platform.
+
+## Current version
+
+image::https://img.shields.io/maven-central/v/io.eventuate.platform/eventuate-platform-dependencies[link="https://search.maven.org/artifact/io.eventuate.platform/eventuate-platform-dependencies"]
+
+
