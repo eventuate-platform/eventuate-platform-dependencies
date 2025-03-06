@@ -38,4 +38,6 @@ dependencies {
     api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-quarkus-bom:${eventuateTramSagasQuarkusVersion}")
     api platform("io.eventuate.tram.springcloudsleuth:eventuate-tram-spring-cloud-sleuth-bom:$eventuateTramSpringCloudSleuthVersion")
 
+    api platform("io.eventuate.tram.springwolf:eventuate-tram-springwolf-support-bom:$eventuateTramSpringWolfSupportVersion")
+
 }
