@@ -7,6 +7,7 @@ workflows:
     jobs:
       - eventuate-gradle-build-and-test/build-and-test:
           name: build
+          java_version_to_install: 17
           project_name: eventuate-platform-dependencies
           gradle_cache_command: ./test-platform-dependencies.sh
           script: ./test-platform-dependencies.sh
@@ -15,6 +16,7 @@ workflows:
               ignore: /.*RELEASE/
       - eventuate-gradle-build-and-test/build-and-test:
           name: deploy
+          java_version_to_install: 17
           project_name: eventuate-platform-dependencies
           gradle_cache_command: echo skip caching
           script: ./.circleci/deploy-artifacts.sh
