@@ -10,3 +10,9 @@ buildscript {
         classpath "io.eventuate.plugins.gradle:eventuate-plugins-gradle-publish:$eventuatePluginsGradleVersion"
     }
 }
+
+allprojects {
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 5, 'minutes'
+    }
+}
