@@ -16,3 +16,11 @@ allprojects {
         resolutionStrategy.cacheChangingModulesFor 5, 'minutes'
     }
 }
+
+task testPlatformDependencies(type: Exec) {
+    commandLine './test-platform-dependencies.sh'
+}
+
+task check {
+    dependsOn testPlatformDependencies
+}
