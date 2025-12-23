@@ -2,6 +2,10 @@
 
 apply plugin: "java"
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 5, 'minutes'
+}
+
 repositories {
     mavenCentral()
     eventuateMavenRepoUrl.split(',').each { repoUrl -> maven { url repoUrl } }

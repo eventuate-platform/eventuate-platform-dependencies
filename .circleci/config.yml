@@ -9,8 +9,8 @@ workflows:
           name: build
           java_version_to_install: "17"
           project_name: eventuate-platform-dependencies
-          gradle_cache_command: ./test-platform-dependencies.sh
-          script: ./test-platform-dependencies.sh
+          gradle_cache_command: ./gradlew build
+          script: ./gradlew build && ./test-platform-dependencies.sh
           filters:
             branches:
               ignore: /.*RELEASE/
