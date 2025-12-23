@@ -12,18 +12,9 @@ javaPlatform {
 }
 
 dependencies {
-    api platform("io.eventuate.util:eventuate-util-bom:${eventuateUtilVersion}")
-    api platform("io.eventuate.common:eventuate-common-bom:${eventuateCommonVersion}")
-    api platform("io.eventuate.messaging.kafka:eventuate-messaging-kafka-bom:${eventuateMessagingKafkaVersion}")
-    api platform("io.eventuate.cdc:eventuate-cdc-bom:${eventuateCdcVersion}")
+    api platform(project(":eventuate-platform-dependencies-spring"))
 
-    api platform("io.eventuate.local.java:eventuate-local-bom:${eventuateLocalVersion}")
-    api platform("io.eventuate.tram.core:eventuate-tram-bom:${eventuateTramVersion}")
-    api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-bom:${eventuateTramSagasVersion}")
     api platform("io.eventuate.local.java:eventuate-local-quarkus-bom:${eventuateLocalQuarkusVersion}")
     api platform("io.eventuate.tram.core:eventuate-tram-quarkus-bom:${eventuateTramQuarkusVersion}")
     api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-quarkus-bom:${eventuateTramSagasQuarkusVersion}")
-    api platform("io.eventuate.tram.springcloudsleuth:eventuate-tram-spring-cloud-sleuth-bom:$eventuateTramSpringCloudSleuthVersion")
-    api platform("io.eventuate.tram.testingsupport.springcloudcontract:eventuate-tram-spring-testing-support-cloud-contract-bom:$eventuateTramSpringTestingSupportCloudContractVersion")
-    api platform("io.eventuate.tram.springwolf:eventuate-tram-springwolf-support-bom:$eventuateTramSpringWolfSupportVersion")
 }
