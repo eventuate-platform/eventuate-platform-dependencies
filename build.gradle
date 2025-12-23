@@ -1,4 +1,7 @@
 buildscript {
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 5, 'minutes'
+    }
     repositories {
         mavenCentral()
         maven {
@@ -8,12 +11,6 @@ buildscript {
     }
     dependencies {
         classpath "io.eventuate.plugins.gradle:eventuate-plugins-gradle-publish:$eventuatePluginsGradleVersion"
-    }
-}
-
-allprojects {
-    configurations.all {
-        resolutionStrategy.cacheChangingModulesFor 5, 'minutes'
     }
 }
 
