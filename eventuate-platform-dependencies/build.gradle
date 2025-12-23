@@ -13,8 +13,5 @@ javaPlatform {
 
 dependencies {
     api platform(project(":eventuate-platform-dependencies-spring"))
-
-    api platform("io.eventuate.local.java:eventuate-local-quarkus-bom:${eventuateLocalQuarkusVersion}")
-    api platform("io.eventuate.tram.core:eventuate-tram-quarkus-bom:${eventuateTramQuarkusVersion}")
-    api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-quarkus-bom:${eventuateTramSagasQuarkusVersion}")
+    api platform(project(":eventuate-platform-dependencies-quarkus"))
 }
