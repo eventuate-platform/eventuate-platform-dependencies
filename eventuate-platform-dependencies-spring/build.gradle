@@ -20,7 +20,8 @@ dependencies {
     api platform("io.eventuate.local.java:eventuate-local-bom:${eventuateLocalVersion}")
     api platform("io.eventuate.tram.core:eventuate-tram-bom:${eventuateTramVersion}")
     api platform("io.eventuate.tram.sagas:eventuate-tram-sagas-bom:${eventuateTramSagasVersion}")
-    api platform("io.eventuate.tram.springcloudsleuth:eventuate-tram-spring-cloud-sleuth-bom:$eventuateTramSpringCloudSleuthVersion")
+
     api platform("io.eventuate.tram.testingsupport.springcloudcontract:eventuate-tram-spring-testing-support-cloud-contract-bom:$eventuateTramSpringTestingSupportCloudContractVersion")
     api platform("io.eventuate.tram.springwolf:eventuate-tram-springwolf-support-bom:$eventuateTramSpringWolfSupportVersion")
+    api platform("io.eventuate.tram.springmicrometertracing:eventuate-tram-spring-micrometer-tracing-bom:$eventuateTramSpringMicrometerTracingVersion")
 }

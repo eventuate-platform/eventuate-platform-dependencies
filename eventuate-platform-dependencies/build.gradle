@@ -13,5 +13,8 @@ javaPlatform {
 
 dependencies {
     api platform(project(":eventuate-platform-dependencies-spring"))
-    api platform(project(":eventuate-platform-dependencies-quarkus"))
+
+//  Needs upgrade:
+//    api platform(project(":eventuate-platform-dependencies-quarkus"))
+
 }
