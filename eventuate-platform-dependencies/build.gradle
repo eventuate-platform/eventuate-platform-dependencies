@@ -1,15 +1,4 @@
-plugins {
-    id 'java-platform'
-    id "maven-publish"
-}
 
-apply plugin: "io.eventuate.plugins.gradle.publish.EventuatePublish"
-
-group = "io.eventuate.platform"
-
-javaPlatform {
-    allowDependencies()
-}
 
 dependencies {
     api platform(project(":eventuate-platform-dependencies-spring"))
