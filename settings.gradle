@@ -1,4 +1,6 @@
 rootProject.name = 'eventuate-platform-dependencies-parent'
 include 'eventuate-platform-dependencies'
 include 'eventuate-platform-dependencies-spring'
-include 'eventuate-platform-dependencies-quarkus'
+
+//  Needs upgrade:
+// include 'eventuate-platform-dependencies-quarkus'

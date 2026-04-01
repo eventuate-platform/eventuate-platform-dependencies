@@ -14,10 +14,22 @@ buildscript {
     }
 }
 
+subprojects {
+    apply plugin: "java-platform"
+    javaPlatform {
+        allowDependencies()
+    }
+
+}
+
+allprojects {
+    group = "io.eventuate.platform"
+}
+
+apply plugin: "io.eventuate.plugins.gradle.publish.EventuatePublish"
+
 task testPlatformDependencies(type: Exec) {
     commandLine './test-platform-dependencies.sh'
 }
 
-task check {
-    dependsOn testPlatformDependencies
-}
+check.dependsOn(testPlatformDependencies)
