@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  eventuate-gradle-build-and-test: "eventuate_io/eventuate-gradle-build-and-test@0.2.9"
+  eventuate-gradle-build-and-test: "eventuate_io/eventuate-gradle-build-and-test@0.2.10"
 workflows:
   version: 2
   build-test-and-deploy:
@@ -28,6 +28,7 @@ workflows:
     jobs:
       - eventuate-gradle-build-and-test/build-and-test:
           name: deploy
+          java_version_to_install: "17"
           project_name: eventuate-platform-dependencies
           gradle_cache_command: echo skip caching
           script: ./.circleci/deploy-artifacts.sh
