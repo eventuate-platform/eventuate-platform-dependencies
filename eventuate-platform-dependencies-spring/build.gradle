@@ -1,7 +1,13 @@
 
 dependencies {
     api platform("io.eventuate.util:eventuate-util-bom:${eventuateUtilVersion}")
-    api platform("io.eventuate.common:eventuate-common-bom:${eventuateCommonVersion}")
+    api platform("io.eventuate.common.eventuate.local:eventuate-common-eventuate-local-bom:${eventuateCommonEventuateLocalVersion}")
+    api platform("io.eventuate.common.database:eventuate-common-database-bom:${eventuateCommonDatabaseVersion}")
+    api platform("io.eventuate.common.zookeeper:eventuate-common-zookeeper-bom:${eventuateCommonZookeeperVersion}")
+    api platform("io.eventuate.common.testcontainers:eventuate-common-testcontainers-bom:${eventuateCommonTestcontainersVersion}")
+    api platform("io.eventuate.common.coordination.leadership:eventuate-common-coordination-leadership-bom:${eventuateCommonCoordinationLeadershipVersion}")
+    api platform("io.eventuate.common.json:eventuate-common-json-bom:${eventuateCommonJsonVersion}")
+    api platform("io.eventuate.common.id:eventuate-common-id-bom:${eventuateCommonIdVersion}")
     api platform("io.eventuate.messaging.kafka:eventuate-messaging-kafka-bom:${eventuateMessagingKafkaVersion}")
     api platform("io.eventuate.cdc:eventuate-cdc-bom:${eventuateCdcVersion}")
 
